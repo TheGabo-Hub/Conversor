@@ -19,13 +19,10 @@ class volteable : AppCompatActivity() {
        // setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         var videoView : VideoView = findViewById(R.id.videoView)
-        val rutaVideo = "android.resource://" + packageName + "/" + R.raw.cars
+        val rutaVideo = "android.resource://" + packageName + "/" + R.raw.interstellar
         videoView.setVideoURI(Uri.parse(rutaVideo))
         videoView.setMediaController(MediaController(this))
         videoView.start()
-
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
